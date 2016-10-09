@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="horizontal|vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -738,30 +739,32 @@
             </LinearLayout>
         </TableRow>
 
-    </TableLayout>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
+        <TableRow
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
-            <Button
+            android:layout_marginTop="15dp">
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/submit"
-                android:id="@+id/buttonYellow3Submit"
-                android:onClick="submit"
-                android:background="@drawable/roundbutton"
-                android:width="250dp"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#ffffff"/>
-        </LinearLayout>
-    </TableRow>
+                android:layout_weight="1" >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/submit"
+                    android:id="@+id/buttonYellow3Submit"
+                    android:onClick="submit"
+                    android:background="@drawable/roundbutton"
+                    android:width="250dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
+
 
 </LinearLayout>

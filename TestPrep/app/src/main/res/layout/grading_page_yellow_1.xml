@@ -37,7 +37,6 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/ratingBarYellow1Manor"
                     android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
                     style="@style/tkdRatingBar"
                     android:numStars="5"
                     android:stepSize="1"
