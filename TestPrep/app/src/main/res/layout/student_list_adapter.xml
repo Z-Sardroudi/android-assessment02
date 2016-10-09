@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Hannah Manoylovic"
+        android:id="@+id/textViewListAdapterName"
+        android:layout_weight=".3"
+        android:layout_gravity="left"
+        android:layout_marginRight="20dp"
+        android:layout_column="1"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="12341"
+        android:id="@+id/textViewListAdapterAge"
+        android:layout_marginRight="20dp"
+        android:layout_column="2"
+        android:layout_weight=".2"
+        android:gravity="center_vertical|right" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="New Text"
+        android:id="@+id/textViewListAdapterHeight"
+        android:layout_weight=".2"
+        android:layout_marginRight="20dp"
+        android:layout_column="3"
+        android:gravity="center_vertical|right" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="New Text"
+        android:id="@+id/textViewListAdapterWeight"
+        android:layout_weight=".2"
+        android:layout_marginRight="20dp"
+        android:layout_column="4"
+        android:gravity="center_vertical|right" />
+</LinearLayout>

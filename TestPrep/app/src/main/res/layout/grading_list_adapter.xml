@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600dp" android:layout_height="400dp"
+    android:weightSum=".9"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Hannah Manoylovic"
+        android:id="@+id/textViewListAdapterName"
+        android:layout_weight=".3"
+        android:layout_gravity="left"
+        android:layout_marginRight="20dp"
+        android:layout_column="1"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Rank"
+        android:id="@+id/textViewListAdapterRank"
+        android:layout_marginRight="20dp"
+        android:layout_column="2"
+        android:layout_weight=".2"
+        android:gravity="center_vertical|right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Score"
+        android:id="@+id/textViewListAdapterScore"
+        android:layout_weight=".2"
+        android:layout_marginRight="20dp"
+        android:layout_column="3"
+        android:gravity="center_vertical|right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="PassFail"
+        android:id="@+id/textViewListAdapterPassFail"
+        android:layout_weight=".2"
+        android:layout_marginRight="20dp"
+        android:layout_column="4"
+        android:gravity="center_vertical|right" />
+</LinearLayout>

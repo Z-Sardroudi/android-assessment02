@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manner / Presentation"
+                    android:id="@+id/textViewYellow1Manor"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Manor"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    style="@style/tkdRatingBar"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blocks"
+                    android:id="@+id/textViewYellowBlocks"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Blocks"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Form"
+                    android:id="@+id/textViewYellow1BasicForm"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1BasicForm"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5"/>
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stances"
+                    android:id="@+id/textViewYellow1Stances"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Stances"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Double Knife / Palm Hand"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:id="@+id/textViewYellow1BlockKnife" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Knife"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taeguk by Count"
+                    android:id="@+id/textViewYellow1TaegukCount"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1TaegukCount"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Short Stance &amp; Centre Punch"
+                    android:id="@+id/textViewYellow1ShortPunch"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1ShortPunch"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kicks (Axe &amp; Swing)"
+                    android:id="@+id/textViewYellow1Axe"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Axe"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taekguk Free Form"
+                    android:id="@+id/textViewYellow1TaegukFree"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1TaegukFree"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strikes"
+                    android:id="@+id/textViewYellow1Strikes"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Strikes"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Front Kick"
+                    android:id="@+id/textViewYellow1FrontKick"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1FrontKick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="One Step Sparring"
+                    android:id="@+id/textViewYellow1OneStep"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1OneStep"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Triple Punch &amp; Round Elbow"
+                    android:id="@+id/textViewYellow1TriplePunch"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1TriplePunch"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Side Kick"
+                    android:id="@+id/textViewYellow1SideKick"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1SideKick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sparring"
+                    android:id="@+id/textViewYellow1Sparring"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar1Yellow1Sparring"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Boxing Skills"
+                    android:id="@+id/textViewYellow1Boxing"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Boxing"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roundhouse Kick"
+                    android:id="@+id/textViewYellow1Roundhouse"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1RoundhouseKick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yell / Kihap"
+                    android:id="@+id/textViewYellow1Kihap"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    style="@style/tkdRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBarYellow1Kihap"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="5" />
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/submit"
+                android:id="@+id/buttonYellow1Submit"
+                android:onClick="submit"
+                android:background="@drawable/roundbutton"
+                android:width="250dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+    </TableRow>
+
+</LinearLayout>
+

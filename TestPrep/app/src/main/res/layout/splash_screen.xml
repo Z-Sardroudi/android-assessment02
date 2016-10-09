@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:weightSum="1"
+    style="@style/AppTheme.NoActionBar"
+    android:orientation="horizontal"
+    android:background="#FFF">
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="511dp"
+        android:src="@drawable/cwt"
+
+        android:id="@+id/imageView"
+        android:layout_gravity="center_vertical" />
+</LinearLayout>

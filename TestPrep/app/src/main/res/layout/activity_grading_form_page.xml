@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jung.min.gradingForms.GradingFormPage"
+    android:orientation="vertical"
+    android:scrollbars="horizontal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <fragment
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:name="com.jung.min.testprep.HeaderFrag"
+                android:id="@+id/fragment5"
+                tools:layout="@layout/fragement_header"
+                android:layout_marginBottom="15dp" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Grade"
+            android:id="@+id/textViewGradePageGrade"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top">
+
+                <fragment
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:name="com.jung.min.gradingForms.StudentDetailsVerticalFrag"
+                    android:id="@+id/studentDetailsFrag"
+                    tools:layout="@layout/grading_page_student_details" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:name="com.jung.min.gradingForms.ScoreFrag"
+                    tools:layout="@layout/grading_page_score"
+                    android:id="@+id/gradeScoreFrag" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/gradeContainer"
+            android:scrollbars="vertical"
+            android:scrollIndicators="right" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Grader</string>
+    <string name="header">CWT Grade</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="Textview_Username">Username</string>
+    <string name="Textview_Password">Password</string>
+    <string name="Button_Login">Login</string>
+    <string name="title_activity_admin_page">AdminPage</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstName">First Name: </string>
+    <string name="lastName">Last Name: </string>
+    <string name="username">Username:</string>
+    <string name="addTeacher">Add Teacher</string>
+    <string name="addStudent">Add Student</string>
+    <string name="teachers">Teachers</string>
+    <string name="DOBFormat">DD-MM-YYYY</string>
+    <string name="students">Students</string>
+    <string name="logout">Logout</string>
+    <string name="clear">Clear</string>
+    <string name="timetable_heading">Timetable</string>
+    <string name="rank_heading">Grade</string>
+    <string name="submit">Submit </string>
+    <string name="heading_grade">Please choose a Grade</string>
+    <string name="heading2_title">Please choose the Time</string>
+    <string name="grade_button">Grade</string>
+    <string name="time_button">Time</string>
+    <string name="title_grade">Welcome to City West TKD Grader!</string>
+    <string name="main_header"> Please enter your login details</string>
+    <string-array name="gender_choices">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="rank_choices">
+        <item>Yellow 1</item>
+        <item>Yellow 2</item>
+        <item>Yellow 3</item>
+    </string-array>
+    <string name="title_activity_summary_page">SummaryPage</string>
+</resources>

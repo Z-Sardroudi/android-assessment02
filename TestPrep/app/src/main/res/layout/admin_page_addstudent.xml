@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_weight="0.10">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:hint="First Name"
+                    style="@style/EditTextCustomHolo"
+                    android:id="@+id/editTextAddStudentFirstName"
+                    android:layout_column="1"
+                    android:layout_span="2" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Weight"
+                    android:ems="10"
+                    android:id="@+id/editTextAddStudentWeight"
+                    style="@style/EditTextCustomHolo"
+                    android:layout_column="3"
+                    android:layout_weight="0"
+                    android:layout_span="2" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    style="@style/EditTextCustomHolo"
+                    android:ems="10"
+                    android:hint="Name"
+                    android:id="@+id/editTextAddStudentLastName"
+                    android:layout_column="1"
+                    android:layout_span="2" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Height"
+                    style="@style/EditTextCustomHolo"
+                    android:ems="10"
+                    android:id="@+id/editTextAddStudentHeight"
+                    android:layout_column="3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:ems="10"
+                    style="@style/EditTextCustomHolo"
+                    android:id="@+id/editTextAddStudentDOB"
+                    android:layout_column="2"
+                    android:hint="@string/DOBFormat" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    style="@style/EditTextCustomHolo"
+                    android:hint="Home Phone"
+                    android:ems="10"
+                    android:id="@+id/editTextAddStudentHomePhone"
+                    android:layout_column="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinnerAddStudentRank"
+                    android:layout_column="2"
+                    android:hint="Belt Type"
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/main_spinner_background_holo_light"
+                    android:layout_gravity="left"
+                    android:layout_span="0" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextAddStudentMobilePhone"
+                    android:layout_column="3"
+                    android:hint="Mobile Phone"
+                    style="@style/EditTextCustomHolo"
+                    android:layout_marginBottom="15dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp">
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinnerAddStudentGender"
+                    android:layout_column="2"
+                    android:spinnerMode="dropdown"
+                    android:layout_gravity="top|left|right"
+                    android:background="@drawable/main_spinner_background_holo_light" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addStudent"
+                    android:background="@drawable/roundbutton"
+                    android:id="@+id/ButtonAddStudent"
+                    android:layout_column="3"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
+

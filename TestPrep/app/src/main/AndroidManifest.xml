@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jung.min.testprep">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.jung.min.adminPage.AdminPage"
+            android:screenOrientation="landscape"/>
+        <activity android:name="com.jung.min.gradingForms.GradingFormPage" />
+        <activity android:name="com.jung.min.StudentList.StudentListPage" />
+        <activity android:name="com.jung.min.SummaryPage.SummaryPage"></activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".Splash"
+            android:screenOrientation="landscape">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".gradetime"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".grade_timetable"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".grade_rank"
+            android:screenOrientation="landscape">
+        </activity>
+    </application>
+
+</manifest>

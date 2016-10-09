@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:paddingBottom="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Student Details"
+                android:id="@+id/textViewStudentDetailsHeading"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="15dp" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/firstName"
+                    android:layout_column="0"
+                    android:id="@+id/TextViewAddStudentFirstName"
+                    android:layout_span="0"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsFirstName"
+                    android:layout_column="1"
+                    android:layout_span="0"
+                    android:text="Temp Text"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Birth: "
+                    android:id="@+id/textViewStudentDetailsDOB"
+
+                    android:layout_column="2"
+                    android:layout_span="0"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewAddStudentDOB"
+                    android:layout_column="3"
+                    android:text="Temp Text"
+                    android:layout_span="0"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lastName"
+                    android:id="@+id/textViewAddStudentLastName"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:layout_span="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsLastName"
+                    android:layout_column="1"
+                    android:text="Temp Text"
+                    android:layout_weight="1"
+                    android:layout_span="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home Phone: "
+                    android:id="@+id/textViewAddStudentHomePhone"
+                    android:layout_column="2"
+                    android:layout_weight="1"
+                    android:layout_span="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsHome"
+                    android:layout_column="1"
+                    android:text="Temp Text"
+                    android:layout_weight="1"
+                    android:layout_span="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender: "
+                    android:id="@+id/textViewAddStudentGender"
+                    android:layout_column="0"
+                    android:layout_span="0"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsGender"
+                    android:layout_column="1"
+                    android:layout_span="0"
+                    android:text="Temp Text"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Phone: "
+                    android:id="@+id/textViewAddStudentMobilePhone"
+                    android:layout_column="2"
+                    android:layout_span="0"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsMobile"
+                    android:layout_column="1"
+                    android:layout_span="0"
+                    android:text="Temp Text"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight"
+                    android:layout_column="0"
+                    android:id="@+id/textViewAddStudentWeight"
+                    android:layout_weight="1"
+                    android:layout_span="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsWeight"
+                    android:layout_column="1"
+                    android:layout_span="0"
+                    android:text="Temp Text"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Rank"
+                    android:id="@+id/textViewAddStudentCurrentrank"
+                    android:layout_column="2"
+                    android:layout_weight="1"
+                    android:layout_span="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsRank"
+                    android:layout_column="1"
+                    android:layout_span="0"
+                    android:text="Temp Text"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height"
+                    android:layout_column="0"
+                    android:id="@+id/textViewAddStudentHeight"
+                    android:layout_span="1"
+                    android:layout_weight="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewStudentDetailsHeight"
+                    android:layout_column="1"
+                    android:text="Temp Text"
+                    android:layout_weight="1"
+                    android:layout_span="1" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="55dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:hint="First Name"
+            style="@style/EditTextCustomHolo"
+            android:id="@+id/editTextAddTeacherFirstName"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Last Name"
+            style="@style/EditTextCustomHolo"
+            android:ems="10"
+            android:id="@+id/editTextAddTeacherLastName"
+            android:layout_column="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="15dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EditTextCustomHolo"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextAddTeacherusername"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            style="@style/EditTextCustomHolo"
+            android:hint="Password"
+            android:ems="10"
+            android:id="@+id/editTextAddTeacherPassword"
+            android:layout_column="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addTeacher"
+            android:background="@drawable/roundbutton"
+            android:id="@+id/buttonAddTeacher"
+            android:layout_column="1"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </TableRow>
+
+</TableLayout>
