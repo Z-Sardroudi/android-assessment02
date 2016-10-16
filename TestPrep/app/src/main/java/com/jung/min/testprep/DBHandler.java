@@ -8,21 +8,26 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 import android.util.Log;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by Zac Hooper on 26/04/16.
+ * Improved by Zahra Sardroudi 15/10/2016:
+ *      1-New table 'rank' added.
+ *      2-New methods:
+ *          public ArrayList<Student> listStudents( Rank rank)  [return list of students in a rank]
+ *          public ArrayList <Rank> listRank()
+ *          public void addRank(Rank rank
  */
 public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
-    private static final int DATABASE_VERSION = 19;
+    private static final int DATABASE_VERSION = 20;
     private static final String DATABASE_NAME = "GradeDB.db";
     //Declare Tables in Database
-    private static final String TABLE_TEACHER = "teachers";
-    private static final String TABLE_STUDENT = "students";
-    private static final String TABLE_GRADING = "gradings";
+    private static final String TABLE_TEACHER = "teacher";
+    private static final String TABLE_STUDENT = "student";
+    private static final String TABLE_GRADING = "grading";
+    private static final String TABLE_RANK = "rank";
+
 
     //Columns in Teacher Table
     public static final String COLUMN_ID = "_id"; //also used in 'students', 'gradings'
@@ -46,6 +51,11 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
     public static final String COLUMN_STUDID = "studID";
     public static final String COLUMN_PASSFAIL = "passFail";
 
+    //columns in Student Rank
+    //public static final String COLUMN_RANK_ID = "_id";
+    public static final String COLUMN_RANK_TITLE = "rankTitle";
+    public static final String COLUMN_REQUIRED_SCORE = "requiredScore";
+
 
     public DBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -53,11 +63,15 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
 
     @Override public void onCreate(SQLiteDatabase db) {
         //Create Teacher Table
-        String CREATE_TEACHER_TABLE = "CREATE TABLE " + TABLE_TEACHER + "(" + COLUMN_ID + " INTEGER PRIMARY KEY, " +
-                COLUMN_FNAME + " TEXT, " + COLUMN_LNAME + " TEXT, " + COLUMN_USERNAME + " TEXT, " + COLUMN_PASSWORD + " TEXT)";
+        String CREATE_TEACHER_TABLE = "CREATE TABLE " + TABLE_TEACHER + "(" +
+                COLUMN_ID + " INTEGER PRIMARY KEY, " +
+                COLUMN_FNAME + " TEXT, "
+                + COLUMN_LNAME + " TEXT, " +
+                COLUMN_USERNAME + " TEXT, " +
+                COLUMN_PASSWORD + " TEXT)";
         db.execSQL(CREATE_TEACHER_TABLE);
 
-        //createa Student Table
+        //Create Student Table
         String CREATE_STUDENT_TABLE = "CREATE TABLE " + TABLE_STUDENT + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY, " +
                 COLUMN_FNAME + " TEXT, " +
@@ -68,7 +82,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
                 COLUMN_DOB + " TEXT, " +
                 COLUMN_MOBILE_PHONE + " TEXT, " +
                 COLUMN_HOME_PHONE + " TEXT, " +
-                COLUMN_CURRENT_RANK + " TEXT);";
+                COLUMN_CURRENT_RANK + " INTEGER)";
         db.execSQL(CREATE_STUDENT_TABLE);
 
         //Create Grading Table
@@ -79,12 +93,22 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
                 COLUMN_SCORE + " INTEGER, " +
                 COLUMN_PASSFAIL + " TEXT)";
         db.execSQL(CREATE_GRADING_TABLE);
+
+        //Create Rank Table
+        String CREATE_RANK_TABLE = "CREATE TABLE " + TABLE_RANK + "(" +
+                COLUMN_ID + " INTEGER PRIMARY KEY, " +
+                COLUMN_RANK_TITLE + " TEXT," +
+                COLUMN_REQUIRED_SCORE + " INTEGER ) " ;
+        db.execSQL(CREATE_RANK_TABLE);
+
+
     }
 
     @Override public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + DBHandler.TABLE_TEACHER);
         db.execSQL("DROP TABLE IF EXISTS " + DBHandler.TABLE_STUDENT);
         db.execSQL("DROP TABLE IF EXISTS " + DBHandler.TABLE_GRADING);
+        db.execSQL("DROP TABLE IF EXISTS " + DBHandler.TABLE_RANK);
 
         onCreate(db);
     }
@@ -104,7 +128,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
         db.close();
     }
 
-    //search for product
+    //search for user password
     public Teacher findTeacher(String username, String password) {
         String query = "SELECT * FROM " + TABLE_TEACHER + " WHERE username = '" +
                 username + "' AND password = '" + password + "'";
@@ -192,7 +216,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
         values.put(COLUMN_DOB, student.getDateOfBirth());
         values.put(COLUMN_MOBILE_PHONE, student.getMobileNo());
         values.put(COLUMN_HOME_PHONE, student.getMobileNo());
-        values.put(COLUMN_CURRENT_RANK, student.getCurrentRank());
+        values.put(COLUMN_CURRENT_RANK, student.getCurrentRank().getID());
 
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -201,7 +225,10 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
     }
 
     public ArrayList<Student> listStudents() {
-        String query = "SELECT * FROM " + TABLE_STUDENT;
+        String query = "SELECT * FROM "+
+                TABLE_STUDENT+" INNER JOIN "+TABLE_RANK+
+                " ON "+TABLE_STUDENT+"."+COLUMN_CURRENT_RANK+"="+TABLE_RANK+"."+COLUMN_ID+";";
+        //String query = "SELECT * FROM " + TABLE_STUDENT;
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<Student> list = new ArrayList<>(); //Array to store Students
         Cursor cursor = db.rawQuery(query, null);
@@ -218,7 +245,43 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
                 p.setDateOfBirth(cursor.getString(6));
                 p.setMobileNo(cursor.getString(7));
                 p.setHomePhone(cursor.getString(8));
-                p.setCurrentRank(Integer.parseInt(cursor.getString(9)));
+                //p.setCurrentRank(Integer.parseInt(cursor.getString(9)));
+                Rank currentRank = new Rank(cursor.getInt(10),cursor.getString(11),cursor.getInt(12));
+                p.setCurrentRank(currentRank);
+                list.add(p);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return list;
+    }
+
+    public ArrayList<Student> listStudents( Rank rank) {
+        String query = "SELECT * FROM "+
+                TABLE_STUDENT+" INNER JOIN "+TABLE_RANK+
+                " ON "+TABLE_STUDENT+"."+COLUMN_CURRENT_RANK+"="+TABLE_RANK+"."+COLUMN_ID+
+                " WHERE "+
+                COLUMN_CURRENT_RANK+"="+rank.getID()+";";
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<Student> list = new ArrayList<>(); //Array to store Students
+        Cursor cursor = db.rawQuery(query, null);
+
+        if (cursor.moveToFirst()) {
+            do { //run loop through all results and store each Student into arraylist
+                Student p = new Student();
+
+                p.setId(Integer.parseInt(cursor.getString(0)));
+                p.setFirstName(cursor.getString(1));
+                p.setLastName(cursor.getString(2));
+                p.setGender(Integer.parseInt(cursor.getString(3)));
+                p.setWeight(Double.parseDouble(cursor.getString(4)));
+                p.setHeight(Double.parseDouble(cursor.getString(5)));
+                p.setDateOfBirth(cursor.getString(6));
+                p.setMobileNo(cursor.getString(7));
+                p.setHomePhone(cursor.getString(8));
+                //p.setCurrentRank(Integer.parseInt(cursor.getString(9)));
+                Rank currentRank = new Rank(cursor.getInt(10),cursor.getString(11),cursor.getInt(12));
+                p.setCurrentRank(currentRank);
                 list.add(p);
             } while (cursor.moveToNext());
         }
@@ -248,18 +311,17 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
         return success;
     }
 
-    public Student findStudent(String id) {
-        String query = "SELECT * FROM " + TABLE_STUDENT + " WHERE " + COLUMN_ID + " = '" +
-                id + "'";
+    public Student findStudentByID(int id) {
+        String query = String.format("SELECT * FROM %s INNER JOIN %s ON %s.%s=$s.%s WHERE %s=%d", TABLE_STUDENT,TABLE_RANK, TABLE_STUDENT,COLUMN_CURRENT_RANK,TABLE_RANK,COLUMN_ID, COLUMN_ID, id);
+
         SQLiteDatabase db = this.getWritableDatabase();
         //run query with cursor
         Cursor cursor = db.rawQuery(query, null);
         Student p = new Student();
 
         //move to first existing object
-        if (cursor.moveToFirst()) {
+        if (cursor.moveToFirst()) { //if find any student with this id
             do { //****** This IF loop may be pointless need to mess with...
-                if (id.equals(cursor.getString(0))) { //If a username matches one in the DB add info into Student object
                     p.setId(Integer.parseInt(cursor.getString(0)));
                     p.setFirstName(cursor.getString(1));
                     p.setLastName(cursor.getString(2));
@@ -269,8 +331,9 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
                     p.setDateOfBirth(cursor.getString(6));
                     p.setMobileNo(cursor.getString(7));
                     p.setHomePhone(cursor.getString(8));
-                    p.setCurrentRank(Integer.parseInt(cursor.getString(9)));
-                }
+                    //p.setCurrentRank(Integer.parseInt(cursor.getString(9)));
+                    Rank currentRank = new Rank(cursor.getInt(10),cursor.getString(11),cursor.getInt(12));
+                    p.setCurrentRank(currentRank);
             } while (cursor.moveToNext());
             cursor.close();
         } else //no match found return a null object
@@ -283,7 +346,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
     }
 
     public void increaseRank(Student s) {
-        int newRank = s.getCurrentRank() + 1;
+        int newRank = s.getCurrentRank().getID() + 1;
 
         String query = "UPDATE " + TABLE_STUDENT +
                 " SET " + COLUMN_CURRENT_RANK + "='" + newRank + "'" +
@@ -302,7 +365,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
     public void addGrading(Grading grading) {
 
         ContentValues values = new ContentValues(); // simpler way of inserting into DB
-        values.put(COLUMN_RANK, grading.getGrade());
+        values.put(COLUMN_RANK, grading.getRank());
         values.put(COLUMN_STUDID, grading.getStudID()); //ID isn't added as the ID will automatically be assigned
         values.put(COLUMN_SCORE, grading.getScore());
         values.put(COLUMN_PASSFAIL, grading.getPassFail());
@@ -324,7 +387,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
             do { //run loop through all results and store each Grading into arraylist
                 Grading p = new Grading();
                 p.setId(Integer.parseInt(cursor.getString(0)));
-                p.setGrade(Integer.parseInt(cursor.getString(1)));
+                p.setRank(Integer.parseInt(cursor.getString(1)));
                 p.setStudID(Integer.parseInt(cursor.getString(2)));
                 p.setScore(Integer.parseInt(cursor.getString(3)));
                 p.setPassFail(cursor.getString(4));
@@ -346,7 +409,7 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
             do { //run loop through all results and store each Grading into arraylist
                 Grading p = new Grading();
                 p.setId(Integer.parseInt(cursor.getString(0)));
-                p.setGrade(Integer.parseInt(cursor.getString(1)));
+                p.setRank(Integer.parseInt(cursor.getString(1)));
                 p.setStudID(Integer.parseInt(cursor.getString(2)));
                 p.setScore(Integer.parseInt(cursor.getString(3)));
                 p.setPassFail(cursor.getString(4));
@@ -379,6 +442,47 @@ public class DBHandler extends SQLiteOpenHelper implements BaseColumns {
         return success;
     }
 
+    public boolean rankTablePopulated(){
+        boolean result = false;
 
+        String query = "SELECT * FROM " + TABLE_RANK +";";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            result = true;
+        }
+        cursor.close();
+        db.close();
+        return result;
+    }
+
+    public void addRank(Rank rank){
+        ContentValues values = new ContentValues(); // simpler way of inserting into DB
+        values.put(COLUMN_RANK_TITLE, rank.getRankTitle()); //ID isn't added as the ID will automatically be assigned
+        values.put(COLUMN_REQUIRED_SCORE, rank.getRequiredScore());
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.insert(TABLE_RANK, null, values);
+        db.close();
+    }
+
+    public ArrayList <Rank> listRank() {
+        String query = "SELECT * FROM " + TABLE_RANK + " ORDER BY " + COLUMN_RANK_TITLE;
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<Rank> list = new ArrayList<>(); //Array to store ranks
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            do { //run loop through all results and store each teacher into arraylist
+                int rankId = cursor.getInt(0);
+                String rankTitle = cursor.getString(1);
+                int requiredScore = cursor.getInt(2);
+
+                list.add(new Rank(rankId,rankTitle,requiredScore));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return list;
+    }
 }
 

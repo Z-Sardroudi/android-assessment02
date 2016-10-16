@@ -11,16 +11,23 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.jung.min.testprep.DBHandler;
-import com.jung.min.testprep.Grade;
+import com.jung.min.testprep.Rank;
 import com.jung.min.testprep.R;
 import com.jung.min.testprep.Student;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import static android.R.attr.id;
+import static com.jung.min.testprep.R.id.spinnerAddStudentRank;
 
 /**
  * Created by Zac Hooper on 9/05/16.
+ * Improved by Zahra Sardroudi 15/10/2016:
+ *      1- add loadSpinnerData method to set spinner values from database
  */
 public class AddStudentFrag extends Fragment {
 
@@ -34,14 +41,17 @@ public class AddStudentFrag extends Fragment {
     EditText editTextHome;
     Spinner spinnerCurrentRank;
     Button buttonAddStudent;
+    private DBHandler dbHandler;
 
 
     public AddStudentFrag() {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.admin_page_addstudent, container, false);
 
+        dbHandler = new DBHandler(getContext(),null,null,12);
+
+        View rootView = inflater.inflate(R.layout.admin_page_addstudent, container, false);
         //initialising the objects on screen
         editTextFirstName = (EditText)rootView.findViewById(R.id.editTextAddStudentFirstName);
         editTextLastName = (EditText)rootView.findViewById(R.id.editTextAddStudentLastName);
@@ -56,12 +66,13 @@ public class AddStudentFrag extends Fragment {
         editTextDOB = (EditText)rootView.findViewById(R.id.editTextAddStudentDOB);
         editTextMobile = (EditText)rootView.findViewById(R.id.editTextAddStudentMobilePhone);
         editTextHome = (EditText)rootView.findViewById(R.id.editTextAddStudentHomePhone);
-        spinnerCurrentRank = (Spinner)rootView.findViewById(R.id.spinnerAddStudentRank);
-        //code to make spinner work
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getContext(), R.array.rank_choices,
-                android.R.layout.simple_spinner_dropdown_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerCurrentRank.setAdapter(adapter2);
+        spinnerCurrentRank = (Spinner)rootView.findViewById(spinnerAddStudentRank);
+        //get list of ranks from database
+        ArrayList<Rank> rankList ;
+        rankList = dbHandler.listRank();
+        //load list of ranks to the spinner
+        loadSpinnerData(spinnerCurrentRank, rankList);
+
         buttonAddStudent = (Button)rootView.findViewById(R.id.ButtonAddStudent);
 
         buttonAddStudent.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +85,7 @@ public class AddStudentFrag extends Fragment {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+                Rank rank = (Rank)spinnerCurrentRank.getSelectedItem();
                 //create Student
                 Student student = new Student(0,
                         editTextFirstName.getText().toString(),
@@ -84,9 +96,9 @@ public class AddStudentFrag extends Fragment {
                         date,
                         editTextMobile.getText().toString(),
                         editTextHome.getText().toString(),
-                        new Grade(spinnerCurrentRank.getSelectedItemPosition()));
+                        rank);
                 //Add student into DB
-                DBHandler dbHandler = new DBHandler(getContext(),null,null,12);
+
                 dbHandler.addStudent(student);
 
                 //rest fields
@@ -104,6 +116,19 @@ public class AddStudentFrag extends Fragment {
         return rootView;
     }
 
+    private void loadSpinnerData(Spinner spinner, List<Rank> spinnerList){
+
+        //create adapter for spinner. will use ToString method of Rank, to get string values of Object Rank and put them into the Adapter
+        ArrayAdapter<Rank> dataAdapter;
+        dataAdapter = new ArrayAdapter<Rank>(this.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerList);
+
+        // Drop down layout style - list view with dropdown
+        dataAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+    }
 
 
 

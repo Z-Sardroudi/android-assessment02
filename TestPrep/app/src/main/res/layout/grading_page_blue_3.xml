@@ -1,0 +1,907 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jung.min.gradingForms.Blue3FormFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Manner / Presentation / Etiquette"
+                        android:id="@+id/textView011"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar011"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        style="@style/tkdRatingBar"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Attacking Combinations(Slide Round and Jump Roundhouse)"
+                        android:id="@+id/textView012"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar012"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fighting - 1"
+                        android:id="@+id/textView013"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar013"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Stances (Previous Grades)"
+                        android:id="@+id/textView021"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar021"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Attacking Combinations (Roundhouse and Spin Roundhouse)"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:id="@+id/textView022" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar022"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fighting - 2"
+                        android:id="@+id/textView023"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar023"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Strikes( Previous Grades)"
+                        android:id="@+id/textView031"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar031"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Form Work Basic to 5th Form)"
+                        android:id="@+id/textView032"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar032"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15 Push Ups"
+                        android:id="@+id/textView033"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar033"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+<!--            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Punches – Boxing Style ( Previous Grades)"
+                        android:id="@+id/textViewBlue3Blocks"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3Blocks"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Form Work
+(Basic to 5th Form)"
+                        android:id="@+id/textViewBlue3TurnHeelKick"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3TurnHeelKick"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15 Sit Ups"
+                        android:id="@+id/textViewBlue3OneStep"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3OneStep"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blocks ( Previous Grades)"
+                        android:id="@+id/textViewBlue3OutsideBlock"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3OutsideBlock"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Form Work (6th)
+By Count"
+                        android:id="@+id/textViewBlue3SlideSwingKick"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3SlideSwingKick"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Taekwondo Terminology (All Movements in Forms)"
+                        android:id="@+id/textViewBlue3Korean"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar1Blue3Korean"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blocks
+(Previous Grades)
+"
+                        android:id="@+id/textViewBlue3Wrist14"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3Wrist14"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Taeguk 5th Form
+(By Count)"
+                        android:id="@+id/textViewBlue3AtkCombFrontKick"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3AtkCombFrontKick"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Breaking Minimum 1 Board"
+                        android:id="@+id/textViewBlue3Kihap"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3Kihap"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kicks( Previous Grades)"
+                        android:id="@+id/textViewBlue3Wrist5"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3Wrist5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Form Work (6th)
+Free Exercise"
+                        android:id="@+id/textViewBlue3TurnRoundhouseKick"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3TurnRoundhouseKick"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Breaking Minimum 1 Board"
+                        android:id="@+id/textViewBlue3Fighting1"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3flighting1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Attacking Combinations( Previous Grades)"
+                        android:id="@+id/textViewBlue3Wrist6"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3Wrist6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1 Step Sparring Counter Attack to Kick or Punch"
+                        android:id="@+id/textViewBlue3AtkComb"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3AtkComb"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yell / Kihap"
+                        android:id="@+id/textViewBlue3Fighting2"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3Fighting2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wrist Rolls 1-6"
+                        android:id="@+id/textViewBlue3WristRoles1-6"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3WristRoles1-6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Arm Bars 1-5"
+                        android:id="@+id/textViewBlue3ArmBars1-3"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3ArmBars1-3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shoulder Lock 1"
+                        android:id="@+id/textViewvBlue3ArmBar4"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar1Blue3ArmBar4"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shoulder Lock 2"
+                        android:id="@+id/textViewBlue3ArmBar3"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        style="@style/tkdRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBarBlue3ArmBar3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5" />
+                </LinearLayout>
+
+
+            </TableRow>
+
+-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/submit"
+                        android:id="@+id/buttonBlue3Submit"
+                        android:onClick="submit"
+                        android:background="@drawable/roundbutton"
+                        android:width="250dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+</FrameLayout>

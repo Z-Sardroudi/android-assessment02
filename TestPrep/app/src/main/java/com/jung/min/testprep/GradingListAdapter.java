@@ -38,7 +38,7 @@ public class GradingListAdapter extends ArrayAdapter {
         Grading p = (Grading) getItem(position); //get Grading object from the arraylist argument
         //find related Student
         DBHandler dbHandler = new DBHandler(getContext(), null, null, 0);
-        Student s = dbHandler.findStudent(Integer.toString(p.getStudID()));
+        Student s = dbHandler.findStudentByID(p.getStudID());
 
         if (p != null) {
             TextView name = (TextView) v.findViewById(R.id.textViewListAdapterName);

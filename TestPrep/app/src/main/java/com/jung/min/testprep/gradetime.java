@@ -9,23 +9,16 @@ import android.widget.Button;
 public class gradetime extends Activity {
     /**
      * Called when the activity is first created.
+     * This class is not used in the revision 15/10/2016. Just kept in case in future Client will need to run multiple rank at the same time [Zahra Sardroudi]
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gradetime);
 
-        Button btn = (Button) findViewById(R.id.button5);
-        Button btn2 = (Button) findViewById(R.id.button4);
+        Button btn = (Button) findViewById(R.id.gradeButton);
+
         btn.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(gradetime.this, grade_timetable.class);
-                startActivity(intent);
-            }
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(gradetime.this, grade_rank.class);

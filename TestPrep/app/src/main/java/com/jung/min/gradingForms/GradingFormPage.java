@@ -11,7 +11,13 @@ import android.widget.TextView;
 import com.jung.min.SummaryPage.SummaryPage;
 import com.jung.min.testprep.R;
 import com.jung.min.testprep.Student;
-
+/**
+ * Created by ??.
+ * Improved by Zahra Sardroudi 15/10/2016:
+ *      improve select grading type fragment
+ *      add new ranks
+ *
+ */
 public class GradingFormPage extends FragmentActivity implements FormFrag.onRatingChangedListener{
 
     StudentDetailsVerticalFrag details;
@@ -41,34 +47,49 @@ public class GradingFormPage extends FragmentActivity implements FormFrag.onRati
         details.studentName.setText(name);
         details.height.setText(Double.toString(s.getHeight()));
         details.weight.setText(Double.toString(s.getWeight()));
-        details.currentRank.setText(s.getCurrentRankName());
+        details.currentRank.setText(s.getCurrentRank().getRankTitle());
         details.age.setText(Integer.toString(s.getAge()));
 
+
+        textViewGrade.setText(s.getCurrentRank().getRankTitle());
+        //Set initial scores
+        scores.totalScore.setText(String.format("/%d",s.getCurrentRank().getRequiredScore()));
+        scores.currentScore.setText(String.format("%d",s.getCurrentRank().getRequiredScore()));
+
         //Select GradeType Fragment
-        switch(s.getCurrentRankName()) {
-            case "yellow1":
+        String rankTitle = s.getCurrentRank().getRankTitle();
+        switch(rankTitle) {
+            case "Yellow Belt 1 Stripe":
                 getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Yellow1FormFrag(), "form").commit();
                 form = (Yellow1FormFrag)fm.findFragmentByTag("form");
-                textViewGrade.setText("Yellow 1");
-                //Set initial scores
-                scores.totalScore.setText("/90");
-                scores.currentScore.setText("90");
                 break;
-            case "yellow2":
+            case "Yellow Belt 2 Stripe":
                 getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Yellow2FormFrag(), "form").commit();
                 form = (Yellow2FormFrag)fm.findFragmentByTag("form");
-                textViewGrade.setText("Yellow 2");
-                scores.totalScore.setText("/125");
-                scores.currentScore.setText("125");
                 break;
-            case "yellow3":
+            case "Yellow Belt 3 Stripe":
                 getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Yellow3FormFrag(), "form").commit();
                 form = (Yellow2FormFrag)fm.findFragmentByTag("form");
-                textViewGrade.setText("Yellow 3");
-                scores.totalScore.setText("/120");
-                scores.currentScore.setText("120");
+                break;
+            case "Blue Belt 1 Stripe":
+                getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Blue1FormFrag(), "form").commit();
+                form = (Blue1FormFrag)fm.findFragmentByTag("form");
+                break;
+            case "Blue Belt 2 Stripe":
+                getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Blue2FormFrag(), "form").commit();
+                form = (Blue2FormFrag)fm.findFragmentByTag("form");
+                break;
+            case "Blue Belt 3 Stripe":
+                getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Blue3FormFrag(), "form").commit();
+                form = (Blue3FormFrag)fm.findFragmentByTag("form");
+                break;
+            case "White Belt":
+                getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new WhiteFormFrag(), "form").commit();
+                form = (WhiteFormFrag)fm.findFragmentByTag("form");
                 break;
             default:
+                //getSupportFragmentManager().beginTransaction().add(R.id.gradeContainer, new Yellow1FormFrag(), "form").commit();
+                //form = (Yellow1FormFrag)fm.findFragmentByTag("form");
                 break;
 
         }

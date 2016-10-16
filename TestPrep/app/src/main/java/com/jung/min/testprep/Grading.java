@@ -2,22 +2,24 @@ package com.jung.min.testprep;
 
 /**
  * Created by Zac Hooper on 25/05/16.
+ *
+ * Edited by Zahra Sardroudi 15/10/2016
  */
 public class Grading {
 
     private int id;
     private int studID;
-    private Grade grade;
+    private Rank rank;
     private int score;
     private String passFail;
 
     public Grading() {
     }
 
-    public Grading(int id, int studID, Grade grade, int score, String passFail) {
+    public Grading(int id, int studID, Rank rank, int score, String passFail) {
         this.id = id;
         this.studID = studID;
-        this.grade = grade;
+        this.rank = rank;
         this.score = score;
         this.passFail = passFail;
     }
@@ -30,12 +32,12 @@ public class Grading {
         return studID;
     }
 
-    public int getGrade() {
-        return grade.getCurrentRank();
+    public int getRank() {
+        return rank.getID();
     }
 
     public String getGradeName() {
-        String rank = grade.getRanks();
+        String rank = this.rank.getRankTitle();
         return rank;
     }
 
@@ -51,8 +53,8 @@ public class Grading {
         this.studID = studID;
     }
 
-    public void setGrade(int index) {
-        grade = new Grade(index);
+    public void setRank(int index) {
+        rank = new Rank(index);
     }
 
     public void setScore(int score) {
@@ -72,7 +74,7 @@ public class Grading {
         return "Grading{" +
                 "id=" + id +
                 ", studID=" + studID +
-                ", grade=" + grade +
+                ", rank=" + rank +
                 ", score=" + score +
                 ", passFail='" + passFail + '\'' +
                 '}';

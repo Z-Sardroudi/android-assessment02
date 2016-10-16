@@ -66,7 +66,7 @@ public class StudentDetailsDialog extends DialogFragment {
         textViewStudentDetailsDOB.setText(student.getDateOfBirth());
         textViewStudentDetailsHome.setText(student.getHomePhone());
         textViewStudentDetailsMobile.setText(student.getMobileNo());
-        textViewStudentDetailsRank.setText(student.getCurrentRankName());
+        textViewStudentDetailsRank.setText(student.getCurrentRank().getRankTitle());
 
         return rootView;
     }

@@ -7,10 +7,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import com.jung.min.StudentList.StudentListPage;
+
+import java.util.List;
+/**
+ * Created by ??.
+ * Improved by Zahra Sardroudi 15/10/2016:
+ *      1- Change listViewGrade items from an array of strings, to get populated from database (new method: loadRankList)
+ *      2- Pass selected Rank object to next activity
+ *
+ */
 public class grade_rank extends Activity {
-    ListView listView;
+    public ListView listViewGrade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +27,21 @@ public class grade_rank extends Activity {
         setContentView(R.layout.grade_rank);
 
         // Get ListView object from xml
-        listView = (ListView) findViewById(R.id.timetable_list);
+        listViewGrade = (ListView) findViewById(R.id.timetable_list);
+        final DBHandler dbHandler = new DBHandler(this,null,null,12);
+        // Loading list of existing ranks into listview
+        loadRankList(listViewGrade, dbHandler.listRank());
 
+/*
         // Defined Array values to show in ListView
-        String[] values = new String[]{"White Belt",
+        String[] values = new String[]{
+                "White Belt",
                 "Yellow Belt 1 Stripe",
                 "Yellow Belt 2 Stripe",
                 "Yellow Belt 3 Stripe",
-
+                "Blue Belt 1 Stripe",
+                "Blue Belt 2 Stripe",
+                "Blue Belt 3 Stripe"
 
         };
 
@@ -40,48 +56,37 @@ public class grade_rank extends Activity {
 
 
         // Assign adapter to ListView
-        listView.setAdapter(adapter);
+        listViewGrade.setAdapter(adapter);
+
+*/
+
+        listViewGrade.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                // which rank is selected
+                Rank selectedRank = (Rank) listViewGrade.getItemAtPosition(position);
+                Intent newActivity = new Intent(grade_rank.this, StudentListPage.class);
+                newActivity.putExtra("rank", selectedRank);     //will pass rank as an object to the next activity
+                startActivity(newActivity);
+            }
+            @SuppressWarnings("unused")
+            public void onClick(View v) {
+            };
+         });
+
+    }//end oncreate
+
+    private void loadRankList(ListView listView, List<Rank> rankList){
+
+        //create adapter for listview. will use ToString method of Rank, to get string values of Object Rank and put them into the Adapter
+        ArrayAdapter<Rank> dataAdapter;
+        dataAdapter = new ArrayAdapter<Rank>(this, android.R.layout.simple_list_item_1, android.R.id.text1, rankList);
+
+        // attaching data adapter to spinner
+        listView.setAdapter(dataAdapter);
+    }
 
 
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
-                        // ListView Clicked item value
-                        String itemValue = (String) listView.getItemAtPosition(position);
-
-
-                        switch (position) {
-
-                            case 1:
-                                Intent newActivity = new Intent(grade_rank.this, grade_timetable.class);
-                                startActivity(newActivity);
-                                break;
-
-                            case 2:
-                                Intent newActivityTwo = new Intent(grade_rank.this, grade_timetable.class);
-                                startActivity(newActivityTwo);
-                                break;
-
-                            case 3:
-                                Intent newActivityThree = new Intent(grade_rank.this, grade_timetable.class);
-                                startActivity(newActivityThree);
-                                break;
-                            case 0:Toast.makeText(getApplicationContext(),
-                                    "  Not Available ", Toast.LENGTH_LONG)
-                                    .show();
-                        }
-
-                    }
-
-                    @SuppressWarnings("unused")
-                    public void onClick(View v) {
-                    }
-
-                    ;
-                });
-
-            }//end oncreate
-
-
-        }//endactivity
+}//endactivity

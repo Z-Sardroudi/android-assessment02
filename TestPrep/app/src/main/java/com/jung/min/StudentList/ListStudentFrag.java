@@ -18,22 +18,26 @@ import android.widget.ListView;
 import com.jung.min.gradingForms.GradingFormPage;
 import com.jung.min.testprep.DBHandler;
 import com.jung.min.testprep.R;
+import com.jung.min.testprep.Rank;
 import com.jung.min.testprep.Student;
 import com.jung.min.testprep.StudentListAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Zac Hooper on 9/05/16.
+ * Improved by Zahra Sardroudi:
+ *      get selected rank from intent and call proper method of DBHandler object to return students with the same rank
  */
 public class ListStudentFrag extends Fragment {
 
     private static final int GRADE_STUDENT = 0;
     private static final int STUDENT_DETAILS = 1;
     private static final int STUDENT_GRADINGS = 2;
-    ListView listView;
-    ArrayAdapter<Student> adapter;
-    ArrayList<Student> list;
+    private ListView listView;
+    private ArrayAdapter<Student> adapter;
+    private ArrayList<Student> list;
 
     public ListStudentFrag() {
     }
@@ -41,16 +45,20 @@ public class ListStudentFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.admin_page_liststudent, container, false);
         listView = (ListView)rootView.findViewById(R.id.listViewStudent);
+        //get selected rank from intent
+        Rank rank = (Rank)getActivity().getIntent().getExtras().get("rank");
 
         DBHandler dbHandler = new DBHandler(getContext(),null,null,1);
-        list = dbHandler.listStudents();
+        list = dbHandler.listStudents(rank);
         StudentListAdapter adapter = new StudentListAdapter(getContext(), R.layout.student_list_adapter, list);
         listView.setAdapter(adapter);
         registerForContextMenu(listView);
+
         dbHandler.close();
 
         return rootView;
     }
+
 
     /**
      * This Method allows a popup menu list to appear on screen displaying options for within the Student Fragment
@@ -64,7 +72,7 @@ public class ListStudentFrag extends Fragment {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
         Student Student = (Student) listView.getItemAtPosition(info.position);
 
-        menu.add(Menu.NONE, GRADE_STUDENT, Menu.NONE, "Grade Student");
+        menu.add(Menu.NONE, GRADE_STUDENT, Menu.NONE, "Rank Student");
         menu.add(Menu.NONE, STUDENT_DETAILS, Menu.NONE, "See Details of " + Student.getLastName());
         menu.add(Menu.NONE, STUDENT_GRADINGS, Menu.NONE, "See Previous Gradings of " + Student.getLastName());
 

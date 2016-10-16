@@ -10,11 +10,16 @@ import android.widget.Button;
 import com.jung.min.StudentList.StudentListPage;
 import com.jung.min.gradingForms.ScoreFrag;
 import com.jung.min.testprep.DBHandler;
-import com.jung.min.testprep.Grade;
+import com.jung.min.testprep.Rank;
 import com.jung.min.testprep.Grading;
 import com.jung.min.testprep.R;
 import com.jung.min.testprep.Student;
-
+/**
+ * Created by ??.
+ * Improved by Zahra Sardroudi 15/10/2016:
+ *      pass rank to next activity in method addGrading()
+ *
+ */
 public class SummaryPage extends AppCompatActivity {
 
     SummaryDetailsFrag details;
@@ -53,7 +58,7 @@ public class SummaryPage extends AppCompatActivity {
         details.studentName.setText(name);
         details.height.setText(Double.toString(s.getHeight()));
         details.weight.setText(Double.toString(s.getWeight()));
-        details.currentRank.setText(s.getCurrentRankName());
+        details.currentRank.setText(s.getCurrentRank().getRankTitle());
         details.age.setText(Integer.toString(s.getAge()));
 
         //Set Scores
@@ -85,22 +90,23 @@ public class SummaryPage extends AppCompatActivity {
         //Create Grading Object
         Grading grading = new Grading(0,
                 s.getId(),
-                new Grade(s.getCurrentRank()),
+                s.getCurrentRank(),
                 scores.getCurrentScore(),
                 continueFrag.passFail.getText().toString());
 
         //Put Grading into DB
         DBHandler dbHandler = new DBHandler(this, null, null, 1);
         dbHandler.addGrading(grading);
-
-        //Increase Grade of Student who passed
+        Rank currentGradingRank= s.getCurrentRank();
+        //Increase Rank of Student who passed
         if (scores.checkPassFail()) { //If student passed increase their rank
-            if (s.getCurrentRank() != 2) { //stop an increase if student is already at highest rank
-                dbHandler.increaseRank(s);
+            if (s.getCurrentRank().getID() != 2) { //stop an increase if student is already at highest rank
+        //        dbHandler.increaseRank(s);
             }
         }
         //go back to student page
         Intent intent = new Intent(this, StudentListPage.class);
+        intent.putExtra("rank",currentGradingRank);
         startActivity(intent);
         dbHandler.close();
     }

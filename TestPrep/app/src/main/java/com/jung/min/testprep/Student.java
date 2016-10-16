@@ -10,6 +10,8 @@ import java.util.Date;
 
 /**
  * Created by Zac Hooper on 3/05/16.
+ * Edited by Zahra Sardroudi 15/10/2016:
+ *      1- change getter setters related to rank, base on Rank class
  */
 public class Student implements Serializable {
 
@@ -22,13 +24,13 @@ public class Student implements Serializable {
     private Date dateOfBirth;
     private String mobileNo;
     private String homePhone;
-    private Grade currentRank; // value is equal to the position of the rank within String[] in Grade class
+    private Rank currentRank; // value is equal to the id of the rank in rank table
 
     public Student() {
     }
 
     public Student(int id, String firstName, String lastName, int gender, double weight, double height,
-                   Date dateOfBirth, String mobileNo, String homePhone, Grade currentRank) {
+                   Date dateOfBirth, String mobileNo, String homePhone, Rank currentRank) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,17 +47,13 @@ public class Student implements Serializable {
     Getters and Setters
      */
 
-    public String getCurrentRankName() {
-        String rank = currentRank.getRanks();
-        return rank;
+    public Rank getCurrentRank() {
+        return this.currentRank;
     }
 
-    public int getCurrentRank() {
-        return currentRank.getCurrentRank();
-    }
 
-    public void setCurrentRank(int index) {
-        currentRank = new Grade(index);
+    public void setCurrentRank(Rank rank) {
+        currentRank = rank;
     }
 
     public int getId() {
