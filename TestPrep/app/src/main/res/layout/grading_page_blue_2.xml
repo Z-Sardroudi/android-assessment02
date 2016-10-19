@@ -6,8 +6,62 @@
 
     <!-- TODO: Update blank fragment layout -->
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="820dp"
+            android:layout_height="1000dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="_"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="_"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="_"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+            </TableRow>
+
 
             <TableRow
                 android:layout_width="match_parent"
@@ -284,7 +338,7 @@
                 </LinearLayout>
             </TableRow>
 
-  <!--          <TableRow
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="3"
@@ -310,7 +364,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2Blocks"
+                        android:id="@+id/ratingBar041"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -338,7 +392,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2TurnHeelKick"
+                        android:id="@+id/ratingBar042"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -366,7 +420,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2OneStep"
+                        android:id="@+id/ratingBar043"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -401,7 +455,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2OutsideBlock"
+                        android:id="@+id/ratingBar051"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -420,9 +474,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Form Work
-Taeguk 3rd – 4th Form
-"
+                        android:text="Form Work Taeguk 3rd – 4th Form"
                         android:id="@+id/textViewBlue2SlideSwingKick"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -431,7 +483,7 @@ Taeguk 3rd – 4th Form
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2SlideSwingKick"
+                        android:id="@+id/ratingBar052"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -459,7 +511,7 @@ Taeguk 3rd – 4th Form
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBar1Blue2Korean"
+                        android:id="@+id/ratingBar053"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -485,9 +537,7 @@ Taeguk 3rd – 4th Form
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Blocks
-(Previous Grades)
-"
+                        android:text="Blocks (Previous Grades)"
                         android:id="@+id/textViewBlue2Wrist14"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -496,7 +546,7 @@ Taeguk 3rd – 4th Form
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2Wrist14"
+                        android:id="@+id/ratingBar061"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -515,8 +565,7 @@ Taeguk 3rd – 4th Form
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Taeguk 5th Form
-(By Count)"
+                        android:text="Taeguk 5th Form (By Count)"
                         android:id="@+id/textViewBlue2AtkCombFrontKick"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -525,7 +574,7 @@ Taeguk 3rd – 4th Form
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2AtkCombFrontKick"
+                        android:id="@+id/ratingBar062"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -553,7 +602,7 @@ Taeguk 3rd – 4th Form
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2Kihap"
+                        android:id="@+id/ratingBar063"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -579,9 +628,7 @@ Taeguk 3rd – 4th Form
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Round Elbow Hit Target Strike
-Palgup Dolyo Pyojeok Chigi
-"
+                        android:text="Round Elbow Hit Target Strike Palgup Dolyo Pyojeok Chigi"
                         android:id="@+id/textViewBlue2Wrist5"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -590,7 +637,7 @@ Palgup Dolyo Pyojeok Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2Wrist5"
+                        android:id="@+id/ratingBar071"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -609,10 +656,8 @@ Palgup Dolyo Pyojeok Chigi
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Taeguk 5th Form
-(Free Exercise)
-"
-                        android:id="@+id/textViewBlue2TurnRoundhouseKick"
+                        android:text="Taeguk 5th Form (Free Exercise)"
+                        android:id="@+id/textViewBlue072"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
 
@@ -620,7 +665,7 @@ Palgup Dolyo Pyojeok Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2TurnRoundhouseKick"
+                        android:id="@+id/ratingBar072"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -648,7 +693,7 @@ Palgup Dolyo Pyojeok Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2flighting1"
+                        android:id="@+id/ratingBar073"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -674,10 +719,7 @@ Palgup Dolyo Pyojeok Chigi
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Downward Hammer Fist Strike
-Mejumeok Naeryo Chigi
-
-"
+                        android:text="Downward Hammer Fist Strike Mejumeok Naeryo Chigi"
                         android:id="@+id/textViewBlue2Wrist6"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -686,7 +728,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2Wrist6"
+                        android:id="@+id/ratingBar081"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -714,7 +756,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2AtkComb"
+                        android:id="@+id/ratingBar082"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -742,7 +784,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2Fighting2"
+                        android:id="@+id/ratingBar083"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -769,7 +811,7 @@ Mejumeok Naeryo Chigi
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Wrist Rolls 1-6"
-                        android:id="@+id/textViewBlue2WristRoles1-6"
+                        android:id="@+id/textViewBlue2WristRoles16"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
 
@@ -777,7 +819,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2WristRoles1-6"
+                        android:id="@+id/ratingBar091"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -797,7 +839,7 @@ Mejumeok Naeryo Chigi
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Arm Bars 1-3"
-                        android:id="@+id/textViewBlue2ArmBars1-3"
+                        android:id="@+id/textViewBlue2ArmBars13"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
 
@@ -805,7 +847,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2ArmBars1-3"
+                        android:id="@+id/ratingBar092"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -833,7 +875,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBar1Blue2ArmBar4"
+                        android:id="@+id/ratingBar093"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -847,6 +889,14 @@ Mejumeok Naeryo Chigi
                 android:layout_height="wrap_content"
                 android:weightSum="3"
                 android:layout_marginTop="25dp" >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -868,7 +918,7 @@ Mejumeok Naeryo Chigi
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue2ArmBar3"
+                        android:id="@+id/ratingBar101"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -876,10 +926,17 @@ Mejumeok Naeryo Chigi
                         android:rating="5" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                </LinearLayout>
 
             </TableRow>
 
--->
 
             <TableRow
                 android:layout_width="match_parent"
@@ -895,7 +952,7 @@ Mejumeok Naeryo Chigi
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/submit"
-                        android:id="@+id/buttonBlue2Submit"
+                        android:id="@+id/buttonSubmit"
                         android:onClick="submit"
                         android:background="@drawable/roundbutton"
                         android:width="250dp"

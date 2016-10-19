@@ -2,15 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_width="820dp"
+        android:layout_height="1000dp">
         <TableRow
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="_"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="_"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="_"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp"
@@ -103,7 +156,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp">
@@ -194,7 +247,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp">
@@ -283,9 +336,9 @@
                     android:rating="5" />
             </LinearLayout>
         </TableRow>
-<!--
+
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp">
@@ -302,7 +355,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Blocks (Previous Grades)"
-                    android:id="@+id/textViewBlue1Blocks"
+                    android:id="@+id/textView041"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -310,7 +363,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1Blocks"
+                    android:id="@+id/ratingBar041"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -330,7 +383,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Attacking Combinations(Previous Grades)"
-                    android:id="@+id/textViewBlue1TurnHeelKick"
+                    android:id="@+id/textView042"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -338,7 +391,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1TurnHeelKick"
+                    android:id="@+id/ratingBar042"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -358,7 +411,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Fighting – 1"
-                    android:id="@+id/textViewBlue1OneStep"
+                    android:id="@+id/textView043"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -366,7 +419,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1OneStep"
+                    android:id="@+id/ratingBar043"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -376,7 +429,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp">
@@ -393,7 +446,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Boxing Skills (previous Grades)"
-                    android:id="@+id/textViewBlue1OutsideBlock"
+                    android:id="@+id/textView051"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -401,7 +454,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1OutsideBlock"
+                    android:id="@+id/ratingBar051"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -421,7 +474,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Attacking Combination(Hop Punch and Turn Side Kick)"
-                    android:id="@+id/textViewBlue1SlideSwingKick"
+                    android:id="@+id/textView052"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -429,7 +482,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1SlideSwingKick"
+                    android:id="@+id/ratingBar052"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -449,7 +502,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Fighting – 2"
-                    android:id="@+id/textViewBlue1Korean"
+                    android:id="@+id/textView053"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -457,7 +510,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar1Blue1Korean"
+                    android:id="@+id/ratingBar053"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -467,7 +520,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp">
@@ -484,7 +537,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Palm Hand Press Block(Batangson Momtong Nullo Makki)"
-                    android:id="@+id/textViewBlue1Wrist14"
+                    android:id="@+id/textView061"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -492,7 +545,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1Wrist14"
+                    android:id="@+id/ratingBar061"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -512,7 +565,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Form Work(Basic to Taeguk 1st Form)"
-                    android:id="@+id/textViewBlue1AtkCombFrontKick"
+                    android:id="@+id/textView062"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -520,7 +573,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1AtkCombFrontKick"
+                    android:id="@+id/ratingBar062"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -540,7 +593,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Push Ups and Sit Ups(10 of each)"
-                    android:id="@+id/textViewBlue1Kihap"
+                    android:id="@+id/textView063"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -548,7 +601,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1Kihap"
+                    android:id="@+id/ratingBar063"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -558,7 +611,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp" >
@@ -575,7 +628,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Swallow Form Knifehand Strike(Jebipum Mok Chigi)"
-                    android:id="@+id/textViewBlue1Wrist5"
+                    android:id="@+id/textView071"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -583,7 +636,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1Wrist5"
+                    android:id="@+id/ratingBar071"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -603,7 +656,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Form Work(Taeguk 2ndForm –  3rd Form)"
-                    android:id="@+id/textViewBlue1TurnRoundhouseKick"
+                    android:id="@+id/textView072"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -611,7 +664,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1TurnRoundhouseKick"
+                    android:id="@+id/ratingBar072"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -631,7 +684,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Korean Terminology(Nos. 1-10 and all Stances)"
-                    android:id="@+id/textViewBlue1Fighting1"
+                    android:id="@+id/textView073"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -639,7 +692,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1flighting1"
+                    android:id="@+id/ratingBar073"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -649,7 +702,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp" >
@@ -666,7 +719,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Back Fist Strike(Dueng Jumeok Apchigi)"
-                    android:id="@+id/textViewBlue1Wrist6"
+                    android:id="@+id/textView081"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -674,7 +727,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1Wrist6"
+                    android:id="@+id/ratingBar081"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -694,7 +747,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Taeguk 4th Form(By Count))"
-                    android:id="@+id/textViewBlue1AtkComb"
+                    android:id="@+id/textView082"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -702,7 +755,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1AtkComb"
+                    android:id="@+id/ratingBar082"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -722,7 +775,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yell / Kihap"
-                    android:id="@+id/textViewBlue1Fighting2"
+                    android:id="@+id/textView083"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -730,7 +783,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1Fighting2"
+                    android:id="@+id/ratingBar083"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -740,7 +793,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp">
@@ -757,7 +810,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Wrist Rolls 1-6"
-                    android:id="@+id/textViewBlue1WristRoles1-6"
+                    android:id="@+id/textView091"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -765,7 +818,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1WristRoles1-6"
+                    android:id="@+id/ratingBar091"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -785,7 +838,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Arm Bars 1-3"
-                    android:id="@+id/textViewBlue1ArmBars1-3"
+                    android:id="@+id/textView092"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -793,7 +846,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1ArmBars1-3"
+                    android:id="@+id/ratingBar092"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -813,7 +866,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Arm Bar 4"
-                    android:id="@+id/textViewBlue1ArmBar4"
+                    android:id="@+id/textView093"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -821,7 +874,7 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar1Blue1ArmBar4"
+                    android:id="@+id/ratingBar093"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
@@ -831,11 +884,18 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:weightSum="3"
             android:layout_marginTop="25dp" >
-
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+            </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -848,7 +908,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" Arm bar 3"
-                    android:id="@+id/textViewBlue1ArmBar3"
+                    android:id="@+id/textView101"
                     android:gravity="center_horizontal"
                     android:layout_weight="1" />
 
@@ -856,23 +916,29 @@
                     style="@style/tkdRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBarBlue1ArmBar3"
+                    android:id="@+id/ratingBar101"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:numStars="5"
                     android:stepSize="1"
                     android:rating="5" />
             </LinearLayout>
-
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+            </LinearLayout>
 
         </TableRow>
 
--->
-
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp">
+
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -883,7 +949,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/submit"
-                    android:id="@+id/buttonBlue1Submit"
+                    android:id="@+id/buttonSubmit"
                     android:onClick="submit"
                     android:background="@drawable/roundbutton"
                     android:width="250dp"

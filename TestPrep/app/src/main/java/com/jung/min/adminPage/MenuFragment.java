@@ -110,10 +110,10 @@ public class MenuFragment extends Fragment {
             dbHandler.addRank(new Rank(0, "Yellow Belt 1 Stripe", 90));
             dbHandler.addRank(new Rank(0, "Yellow Belt 2 Stripe", 125));
             dbHandler.addRank(new Rank(0, "Yellow Belt 3 Stripe", 120));
-            dbHandler.addRank(new Rank(0, "Blue Belt 1 Stripe", 120));
-            dbHandler.addRank(new Rank(0, "Blue Belt 2 Stripe", 120));
-            dbHandler.addRank(new Rank(0, "Blue Belt 3 Stripe", 120));
-            dbHandler.addRank(new Rank(0, "White Belt", 120));
+            dbHandler.addRank(new Rank(0, "Blue Belt 1 Stripe", 140));
+            dbHandler.addRank(new Rank(0, "Blue Belt 2 Stripe", 140));
+            dbHandler.addRank(new Rank(0, "Blue Belt 3 Stripe", 140));
+            dbHandler.addRank(new Rank(0, "White Belt", 105));
         }
     }
 

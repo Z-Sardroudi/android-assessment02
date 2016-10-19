@@ -7,8 +7,62 @@
     <!-- TODO: Update blank fragment layout -->
 
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="820dp"
+            android:layout_height="1000dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="_"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="_"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="_"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+            </TableRow>
+
 
             <TableRow
                 android:layout_width="match_parent"
@@ -285,7 +339,7 @@
                 </LinearLayout>
             </TableRow>
 
-<!--            <TableRow
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="3"
@@ -311,7 +365,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3Blocks"
+                        android:id="@+id/ratingBar041"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -330,8 +384,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Form Work
-(Basic to 5th Form)"
+                        android:text="Form Work (Basic to 5th Form)"
                         android:id="@+id/textViewBlue3TurnHeelKick"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -340,7 +393,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3TurnHeelKick"
+                        android:id="@+id/ratingBar042"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -368,7 +421,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3OneStep"
+                        android:id="@+id/ratingBar043"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -403,7 +456,7 @@
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3OutsideBlock"
+                        android:id="@+id/ratingBar051"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -422,8 +475,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Form Work (6th)
-By Count"
+                        android:text="Form Work (6th) By Count"
                         android:id="@+id/textViewBlue3SlideSwingKick"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -432,7 +484,7 @@ By Count"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3SlideSwingKick"
+                        android:id="@+id/ratingBar052"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -460,7 +512,7 @@ By Count"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBar1Blue3Korean"
+                        android:id="@+id/ratingBar053"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -486,9 +538,7 @@ By Count"
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Blocks
-(Previous Grades)
-"
+                        android:text="Blocks (Previous Grades)"
                         android:id="@+id/textViewBlue3Wrist14"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -497,7 +547,7 @@ By Count"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3Wrist14"
+                        android:id="@+id/ratingBar061"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -516,8 +566,7 @@ By Count"
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Taeguk 5th Form
-(By Count)"
+                        android:text="Taeguk 5th Form (By Count)"
                         android:id="@+id/textViewBlue3AtkCombFrontKick"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -526,7 +575,7 @@ By Count"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3AtkCombFrontKick"
+                        android:id="@+id/ratingBar062"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -554,7 +603,7 @@ By Count"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3Kihap"
+                        android:id="@+id/ratingBar063"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -589,7 +638,7 @@ By Count"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3Wrist5"
+                        android:id="@+id/ratingBar071"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -608,8 +657,7 @@ By Count"
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Form Work (6th)
-Free Exercise"
+                        android:text="Form Work (6th) Free Exercise"
                         android:id="@+id/textViewBlue3TurnRoundhouseKick"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
@@ -618,7 +666,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3TurnRoundhouseKick"
+                        android:id="@+id/ratingBar072"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -646,7 +694,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3flighting1"
+                        android:id="@+id/ratingBar073"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -681,7 +729,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3Wrist6"
+                        android:id="@+id/ratingBar081"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -709,7 +757,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3AtkComb"
+                        android:id="@+id/ratingBar082"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -737,7 +785,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3Fighting2"
+                        android:id="@+id/ratingBar083"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -764,7 +812,7 @@ Free Exercise"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Wrist Rolls 1-6"
-                        android:id="@+id/textViewBlue3WristRoles1-6"
+                        android:id="@+id/textViewBlue3WristRoles16"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
 
@@ -772,7 +820,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3WristRoles1-6"
+                        android:id="@+id/ratingBar091"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -792,7 +840,7 @@ Free Exercise"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Arm Bars 1-5"
-                        android:id="@+id/textViewBlue3ArmBars1-3"
+                        android:id="@+id/textViewBlue3ArmBars13"
                         android:gravity="center_horizontal"
                         android:layout_weight="1" />
 
@@ -800,7 +848,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3ArmBars1-3"
+                        android:id="@+id/ratingBar092"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -828,7 +876,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBar1Blue3ArmBar4"
+                        android:id="@+id/ratingBar093"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -842,6 +890,14 @@ Free Exercise"
                 android:layout_height="wrap_content"
                 android:weightSum="3"
                 android:layout_marginTop="25dp" >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -863,7 +919,7 @@ Free Exercise"
                         style="@style/tkdRatingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBarBlue3ArmBar3"
+                        android:id="@+id/ratingBar101"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:numStars="5"
@@ -871,10 +927,17 @@ Free Exercise"
                         android:rating="5" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+                </LinearLayout>
 
             </TableRow>
 
--->
 
             <TableRow
                 android:layout_width="match_parent"
@@ -890,7 +953,7 @@ Free Exercise"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/submit"
-                        android:id="@+id/buttonBlue3Submit"
+                        android:id="@+id/buttonSubmit"
                         android:onClick="submit"
                         android:background="@drawable/roundbutton"
                         android:width="250dp"

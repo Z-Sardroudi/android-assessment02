@@ -45,9 +45,35 @@ public class Blue1FormFrag extends FormFrag{
         ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar032));
         ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar033));
 
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar041));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar042));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar043));
+
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar051));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar052));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar053));
+
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar061));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar062));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar063));
+
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar071));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar072));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar073));
+
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar081));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar082));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar083));
+
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar091));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar092));
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar093));
+
+        ratingbar.add((RatingBar)rootView.findViewById(R.id.ratingBar101));
 
 
-        submit = (Button)rootView.findViewById(R.id.buttonBlue1Submit);
+
+        submit = (Button)rootView.findViewById(R.id.buttonSubmit);
         //create listeners for rating bars
         for (RatingBar bar: ratingbar ) {
            bar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
